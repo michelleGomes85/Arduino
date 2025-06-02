@@ -10,10 +10,14 @@
 ## Portas digitais
 
 - Númeradas de 0 a 13 (nem todas estando disponíveis)
+  - Portas que trabalham apenas com dois estados:
+    - HIGH (1) = 5V
+    - LOW (0) = 0V
 
 ## Portas Analógicas (A0 a A5)
 
-- 6 portas
+- 6 portas: Portas analógicas: A0 a A5
+  - Portas que leem valores variáveis entre 0 e 5V (ou 0 e 1023, no conversor ADC de 10 bits).
 
 ## Outros conectores 
 
