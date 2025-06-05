@@ -39,4 +39,11 @@
 
 ![Foto montagem fisica](assets/displaySevenSegments.png)
 
-## 
+
+## 6 - Bomba 
+
+**Descrição:** Treinando melhor a lógica usando os componentes `display seven segments` e `buzzer`
+
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/bomb.ino)
+
+![Foto montagem fisica](assets/bomb.png)
