@@ -15,7 +15,7 @@ void loop()
 {
   valorSensor = analogRead(SENSOR);
   
-  if (valorSensor > 800)
+  if (valorSensor < 150)
     digitalWrite(LED, HIGH);
   else
     digitalWrite(LED, LOW);
