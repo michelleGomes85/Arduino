@@ -1,49 +1,55 @@
 # Código Arduino simples para estudo
 
-### 1 - Stoplight
-**Descrição:**  Lógica para acender e apagar um `led`, em tempos alternados 
+### 1 - Semáforo Simples  
+**Descrição:** Simulação básica de um semáforo utilizando um LED, com alternância entre os estados ligado e desligado em intervalos definidos de tempo.
 
-[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/stoplight.ino)
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/stoplight.ino)  
+![Foto montagem física](assets/stoplight.png)
 
-![Foto montagem fisica](assets/stoplight.png)
+---
 
-## 2 - Stoplight with pedestrian
+### 2 - Semáforo com Pedestre  
+**Descrição:** Ampliação do projeto anterior com LEDs adicionais para simular a passagem de pedestres. Utiliza uma estrutura `for` para piscar o LED do pedestre antes da troca para o sinal vermelho.
 
-**Descrição:** Uso de mais `led` para simular o pedestre, faz o uso do for para que o pedestre pisque antes de ficar vermelho de novo 
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/stoplight_pedestrian.ino)  
+![Foto montagem física](assets/stoplight_pedestrian.png)
 
-[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/stoplight_pedestrian.ino)
+---
 
-![Foto montagem fisica](assets/stoplight_pedestrian.png)
+### 3 - Interruptor Deslizante  
+**Descrição:** Introdução ao uso do componente `slide switch`. O LED acende ou apaga de acordo com a posição do interruptor, funcionando como uma chave liga/desliga.
 
-### 3 - Interruptor Deslizante
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/interruptor.ino)  
+![Foto montagem física](assets/switch.png)
 
-**Descrição:** Aprendendo a usar o componente `slide switch` com um  `led`
+---
 
-[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/interruptor.ino)
+### 4 - Buzzer  
+**Descrição:** Projeto que demonstra o uso de um `buzzer` para gerar sons. Permite compreender como controlar sinais sonoros com o Arduino.
 
-![Foto montagem fisica](assets/switch.png)
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/buzzer.ino)  
+![Foto montagem física](assets/buzzer.png)
 
-## 4 - Buzzer
+---
 
-**Descrição:** Uso do `buzzer` para produzir sons com o Arduino
+### 5 - Display de Sete Segmentos  
+**Descrição:** Utilização do `display de sete segmentos` para exibir números. Os segmentos são ativados individualmente para formar os dígitos.
 
-[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/buzzer.ino)
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/displaySevenSegments.ino)  
+![Foto montagem física](assets/displaySevenSegments.png)
 
-![Foto montagem fisica](assets/buzzer.png)
+---
 
-## 5 - Display de Sete Segmentos
+### 6 - Simulação de Bomba  
+**Descrição:** Projeto que combina o `display de sete segmentos` e o `buzzer` para simular uma contagem regressiva de uma bomba. Trabalha lógica de tempo e saída sonora/visual.
 
-**Descrição:** Uso do componente `display seven segments` dispositivo com vários leds, que serão ligados e desligados para formar números.
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/bomb.ino)  
+![Foto montagem física](assets/bomb.png)
 
-[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/displaySevenSegments.ino)
+---
 
-![Foto montagem fisica](assets/displaySevenSegments.png)
+### 7 - Sensor de Luz (Fotoresistor - LDR)  
+**Descrição:** Demonstração do uso de um `fotoresistor (LDR)` para detectar luminosidade. O LED acende automaticamente quando a luz ambiente diminui e apaga quando há claridade.
 
-
-## 6 - Bomba 
-
-**Descrição:** Treinando melhor a lógica usando os componentes `display seven segments` e `buzzer`
-
-[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/bomb.ino)
-
-![Foto montagem fisica](assets/bomb.png)
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/sensor_LDR_LED.ino)  
+![Foto montagem física](assets/fotoresistor.png)
