@@ -68,3 +68,11 @@
   - **Ânodo comum**: todos os ânodos (positivos) são conectados juntos.
 
 - **Como usar?** Cada segmento é controlado por um pino. Você precisa ligar e desligar os segmentos corretos para formar o número desejado.
+
+### Fotoresistor (LDR - Light Dependent Resistor)
+
+- **O que é?** Um sensor que varia sua resitência conforme a intensidade da luz incidente. É também chamado de LDR (Light Dependent Resistor)
+- **Para que serve?** Detectar níveis de luminosidade no ambiente. Pode seer usado para acionar lâmpadas automaticamente quando escurece, medir luz solar, criar alarmes que disparam com luz, entre outros.
+- **Como funciona?**
+  - **Muita luz** -> Resistência baixa -> Maior tensão na entrada analógica
+  - **Pouca luz** -> Resistência alta -> Menor tensão na entrada analógica
