@@ -76,3 +76,42 @@
 - **Como funciona?**
   - **Muita luz** -> Resistência baixa -> Maior tensão na entrada analógica
   - **Pouca luz** -> Resistência alta -> Menor tensão na entrada analógica
+ 
+### Display LCD (Liquid Crystal Display)
+
+#### 📌 O que é?
+
+Um módulo que permite exibir texto, números e símbolos. O modelo mais comum é o **LCD 16x2**, com 2 linhas de 16 caracteres.
+
+#### 🎯 Para que serve?
+
+Mostrar informações como:
+
+- Leituras de sensores  
+- Mensagens do sistema  
+- Menus interativos
+
+#### ⚙️ Como usar?
+
+Pode ser conectado diretamente ao Arduino (modo paralelo) ou com **módulo I2C** (mais simples e com menos fios).
+
+#### 📋 Pinos do LCD 16x2 (modo paralelo)
+
+| Nº | Nome do Pino | Função                                         |
+|----|---------------|------------------------------------------------|
+| 1  | VSS           | Terra (GND)                                   |
+| 2  | VDD           | Alimentação (5V)                              |
+| 3  | VO            | Controle de contraste (via potenciômetro)     |
+| 4  | RS            | Seleciona entre comando (0) e dados (1)       |
+| 5  | RW            | Leitura (1) ou escrita (0)                    |
+| 6  | E (Enable)    | Habilita o envio de dados                     |
+| 7  | D0            | Dados (bit 0) – usado em modo 8 bits          |
+| 8  | D1            | Dados (bit 1) – usado em modo 8 bits          |
+| 9  | D2            | Dados (bit 2) – usado em modo 8 bits          |
+| 10 | D3            | Dados (bit 3) – usado em modo 8 bits          |
+| 11 | D4            | Dados (bit 4) – usado em modo 4 ou 8 bits     |
+| 12 | D5            | Dados (bit 5) – usado em modo 4 ou 8 bits     |
+| 13 | D6            | Dados (bit 6) – usado em modo 4 ou 8 bits     |
+| 14 | D7            | Dados (bit 7) – usado em modo 4 ou 8 bits     |
+| 15 | LED+ (A)      | Anodo da luz de fundo (geralmente 5V com resistor) |
+| 16 | LED− (K)      | Cátodo da luz de fundo (GND)                  |
