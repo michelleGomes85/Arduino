@@ -1,4 +1,8 @@
-# Código Arduino simples para estudo
+# Códigos de Arduino simples para estudo
+
+[![📘 Introdução ao Arduino](https://img.shields.io/badge/Introdução-Arduino-blue?logo=arduino)](https://github.com/michelleGomes85/Arduino/blob/main/introduction.md)
+
+---
 
 ### 1 - Semáforo Simples  
 **Descrição:** Simulação básica de um semáforo utilizando um LED, com alternância entre os estados ligado e desligado em intervalos definidos de tempo.
