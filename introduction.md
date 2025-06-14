@@ -1,117 +1,156 @@
-# Introdução 
+# Introdução ao Arduino
 
-## O que é o Arduíno?
+## O que é o Arduino?
 
-`Arduino` é uma plataforma de prototipagem eletrônica criada na Itália em 2005. 
+O **Arduino** é uma plataforma eletrônica muito usada para criar projetos interativos. Ela foi criada na Itália, em 2005, e é composta por:
 
-- Composta por uma placa de hardware livre e um ambiente de desenvolvimento integrado (IDE) que facilita a programação de microcontroladores. Essa plataforma amplamente utilizada para criar projetos interativos que podem controlar e monitorar
-  o ambiente físico usando sensores e atuadores.
+- **Uma placa física (hardware)** — com um microcontrolador que você pode programar para controlar luzes, motores, sensores e outros componentes eletrônicos.  
+- **Um programa (IDE - Ambiente de Desenvolvimento Integrado)** — onde você escreve o código para fazer a placa funcionar do jeito que quiser.
 
-## Portas digitais
+### Por que o Arduino é tão popular?
 
-- Númeradas de 0 a 13 (nem todas estando disponíveis)
-  - Portas que trabalham apenas com dois estados:
-    - HIGH (1) = 5V
-    - LOW (0) = 0V
+- É fácil de usar, mesmo para quem está começando.  
+- É aberto e barato.  
+- Você pode criar projetos que interagem com o mundo real, como controlar luzes, medir temperatura, montar robôs, e muito mais.
 
-## Portas Analógicas (A0 a A5)
+---
 
-- 6 portas: Portas analógicas: A0 a A5
-  - Portas que leem valores variáveis entre 0 e 5V (ou 0 e 1023, no conversor ADC de 10 bits).
+## Entendendo as portas do Arduino
 
-## Outros conectores 
+### Portas Digitais
 
-- GNT - Todo conector GNT é terra
-- Vim - Conector especial de alimentação
-- Dois conectores para receber alimentação 3.3v e 5v
-- Led conectado a porta 13
+- São pinos numerados de **0 a 13** (alguns modelos podem ter mais).  
+- Funcionam com dois estados básicos:  
+  - **HIGH (1)** = envia 5 Volts  
+  - **LOW (0)** = envia 0 Volts (terra)  
 
----- 
+- Algumas dessas portas são **PWM** (Pulse Width Modulation), indicadas com o símbolo `~` próximo ao número da porta.  
 
-# Componentes
+#### O que é PWM?
+
+- PWM permite simular uma saída analógica, variando a intensidade do sinal digital entre **0 e 255**.  
+- Isso possibilita, por exemplo, controlar o brilho de um LED ou a velocidade de um motor, variando o tempo que o sinal fica ligado dentro de um ciclo.
+
+> **Diferença importante:**  
+> - Portas digitais normais só aceitam **ligado (HIGH)** ou **desligado (LOW)**.  
+> - Portas PWM podem enviar um sinal que varia em intensidade (de 0 a 255), simulando um valor analógico.
+
+---
+
+### Portas Analógicas (A0 a A5)
+
+- São numeradas de **A0 a A5** (em alguns modelos pode ter mais).  
+- Elas **leem valores variados** entre 0 e 5 volts, convertendo em números de **0 a 1023** (10 bits de resolução).  
+- Usadas para ler sensores que entregam valores contínuos, como luminosidade, temperatura, posição do potenciômetro, etc.
+
+---
+
+## Componentes básicos do Arduino
+
+### LED (Diodo Emissor de Luz)
+
+- **O que é?** Componente que acende uma luz quando recebe corrente elétrica no sentido certo.  
+- **Como usar?**  
+  - Perna longa: **ânodo**, conecte ao pino digital do Arduino.  
+  - Perna curta: **cátodo**, conecte ao GND (terra).  
+  - Use sempre um resistor em série para proteger o LED.
+
+---
+
 
 ### Resistor
 
-- **O que é?** Componente eletrônico que limita a passagem de corrente elétrica no circuito.
+- **O que é?** Componente que limita a quantidade de corrente que passa pelo circuito.  
+- **Para que serve?** Evita que outros componentes, como LEDs, queimem por excesso de corrente.  
+- **Como usar?** Conecte em série com o componente (por exemplo, entre o pino do Arduino e o LED).  
+- **Valores comuns:** geralmente entre 220Ω e 1kΩ para LEDs.  
+- **Importante:** o resistor é um componente físico, não precisa ser programado no Arduino.
 
-- **Para que serve?** Evita que componentes como LEDs recebam corrente excessiva, o que poderia queimá-los.
+---
 
-- **Como usar?** Conecte o resistor em série com o componente que deseja proteger (por exemplo, entre o pino do Arduino e o LED).
+### Slide Switch (Interruptor Deslizante)
 
-- **Valor comum para LEDs:** Normalmente entre 220Ω e 1kΩ, dependendo do LED e da tensão.
+- **O que é?** Um tipo de interruptor que você pode deslizar para ligar ou desligar um circuito.  
+- **Como funciona?** Quando está em uma posição, conecta o circuito (fechado); na outra, desconecta (aberto).  
+- **Uso no Arduino:**  
+  - Ligado a uma porta digital para ler o estado (HIGH ou LOW).  
+  - Pode funcionar como uma chave liga/desliga para outros componentes, como LEDs.
 
-- **Não precisa de função no código:** O resistor atua fisicamente no circuito, então o código Arduino não precisa controlá-lo diretamente.
+---
 
+### Botão (Button)
 
-### LED (Light Emitting Diode)
+- **O que é?** Um componente que faz contato elétrico apenas quando pressionado.  
+- **Como funciona?**  
+  - Quando você aperta, o circuito fecha e envia um sinal HIGH ou LOW para o Arduino.  
+  - Quando solta, o circuito abre e o sinal retorna ao estado oposto.  
+- **Uso no Arduino:**  
+  - Usado para interagir com o usuário — por exemplo, iniciar ações, mudar modos ou controlar dispositivos.
 
-- **O que é?** Um diodo que emite luz quando a corrente passa por ele no sentido correto.
+---
 
-- **Como usar?** Conecte o ânodo (perna longa) ao pino digital do Arduino, e o cátodo (perna curta) ao GND, com um resistor em série para limitar a corrente.
+### Buzzer (Campainha Eletrônica)
 
-### Buzzer
+- **O que é?** Dispositivo que emite som.  
+- Pode ser:  
+  - **Ativo:** emite som ao receber energia, sem necessidade de controle.  
+  - **Passivo:** precisa de sinal para gerar diferentes tons (como música).  
+- **Como usar?**  
+  - Pino positivo ao pino digital do Arduino.  
+  - Pino negativo ao GND.
 
-- **O que é?** Um dispositivo que emite som. Pode ser:
-
-  - **Ativo**: já tem circuito interno, basta ligar para emitir som.
-  - **Passivo**: precisa de sinal PWM para gerar tons.
-
-- **Como usar?** Conecte o pino positivo do buzzer ao pino digital do Arduino, e o pino negativo ao GND.
+---
 
 ### Display de 7 Segmentos
 
-- **O que é?** Um conjunto de 7 LEDs (segmentos) organizados para formar números e letras simples.
+- **O que é?** Conjunto de 7 LEDs que juntos formam números e algumas letras.  
+- **Tipos:**  
+  - **Cátodo comum:** todos os negativos unidos.  
+  - **Ânodo comum:** todos os positivos unidos.  
+- **Como usar?**  
+  - Ligue cada segmento a um pino do Arduino.  
+  - Controle quais segmentos acender para formar os números.
 
-- **Tipos:**
+---
 
-  - **Cátodo comum**: todos os cátodos (negativos) são conectados juntos.
-  - **Ânodo comum**: todos os ânodos (positivos) são conectados juntos.
+### Fotoresistor (LDR)
 
-- **Como usar?** Cada segmento é controlado por um pino. Você precisa ligar e desligar os segmentos corretos para formar o número desejado.
+- **O que é?** Sensor que muda sua resistência conforme a luz que recebe.  
+- **Para que serve?** Detectar luminosidade do ambiente, como acender uma lâmpada quando escurece.  
+- **Como funciona?**  
+  - Muita luz → baixa resistência → maior tensão na porta analógica  
+  - Pouca luz → alta resistência → menor tensão
 
-### Fotoresistor (LDR - Light Dependent Resistor)
+---
 
-- **O que é?** Um sensor que varia sua resitência conforme a intensidade da luz incidente. É também chamado de LDR (Light Dependent Resistor)
-- **Para que serve?** Detectar níveis de luminosidade no ambiente. Pode seer usado para acionar lâmpadas automaticamente quando escurece, medir luz solar, criar alarmes que disparam com luz, entre outros.
-- **Como funciona?**
-  - **Muita luz** -> Resistência baixa -> Maior tensão na entrada analógica
-  - **Pouca luz** -> Resistência alta -> Menor tensão na entrada analógica
- 
 ### Display LCD (Liquid Crystal Display)
 
-#### 📌 O que é?
+#### O que é?
 
-Um módulo que permite exibir texto, números e símbolos. O modelo mais comum é o **LCD 16x2**, com 2 linhas de 16 caracteres.
+- Um visor que mostra texto e números.  
+- O mais comum tem **16 colunas e 2 linhas** (16x2).
 
-#### 🎯 Para que serve?
+#### Para que serve?
 
-Mostrar informações como:
+- Exibir informações como temperatura, mensagens, menus, etc.
 
-- Leituras de sensores  
-- Mensagens do sistema  
-- Menus interativos
+#### Como usar?
 
-#### ⚙️ Como usar?
+- Pode ser ligado diretamente ao Arduino (modo paralelo) ou com módulo I2C, que facilita a conexão (menos fios).
 
-Pode ser conectado diretamente ao Arduino (modo paralelo) ou com **módulo I2C** (mais simples e com menos fios).
+#### Principais pinos do LCD 16x2 (modo paralelo)
 
-#### 📋 Pinos do LCD 16x2 (modo paralelo)
+| Nº  | Nome | Função                                  |
+|------|-------|-----------------------------------------|
+| 1    | VSS   | Terra (GND)                            |
+| 2    | VDD   | Alimentação (5V)                       |
+| 3    | VO    | Ajuste do contraste (com potenciômetro) |
+| 4    | RS    | Seleciona comando (0) ou dados (1)     |
+| 5    | RW    | Leitura (1) ou escrita (0)             |
+| 6    | E     | Habilita envio de dados                |
+| 7-14 | D0-D7 | Dados (usados em modo 8 bits)          |
+| 11-14| D4-D7 | Dados usados em modo 4 bits             |
+| 15   | LED+  | Anodo luz de fundo (com resistor)     |
+| 16   | LED-  | Cátodo luz de fundo (GND)              |
 
-| Nº | Nome do Pino | Função                                         |
-|----|---------------|------------------------------------------------|
-| 1  | VSS           | Terra (GND)                                   |
-| 2  | VDD           | Alimentação (5V)                              |
-| 3  | VO            | Controle de contraste (via potenciômetro)     |
-| 4  | RS            | Seleciona entre comando (0) e dados (1)       |
-| 5  | RW            | Leitura (1) ou escrita (0)                    |
-| 6  | E (Enable)    | Habilita o envio de dados                     |
-| 7  | D0            | Dados (bit 0) – usado em modo 8 bits          |
-| 8  | D1            | Dados (bit 1) – usado em modo 8 bits          |
-| 9  | D2            | Dados (bit 2) – usado em modo 8 bits          |
-| 10 | D3            | Dados (bit 3) – usado em modo 8 bits          |
-| 11 | D4            | Dados (bit 4) – usado em modo 4 ou 8 bits     |
-| 12 | D5            | Dados (bit 5) – usado em modo 4 ou 8 bits     |
-| 13 | D6            | Dados (bit 6) – usado em modo 4 ou 8 bits     |
-| 14 | D7            | Dados (bit 7) – usado em modo 4 ou 8 bits     |
-| 15 | LED+ (A)      | Anodo da luz de fundo (geralmente 5V com resistor) |
-| 16 | LED− (K)      | Cátodo da luz de fundo (GND)                  |
+---
