@@ -56,8 +56,6 @@
 
 ---
 
----
-
 ### 8 - Potenciômetro  
 
 **Descrição:** Este projeto utiliza um `potenciômetro` para controlar o brilho de um LED. O potenciômetro gera um valor analógico de 0 a 1023, dependendo da posição do seu eixo. Para que esse valor seja usado no controle de brilho (via PWM), é necessário convertê-lo para a faixa de 0 a 255 — que é a faixa aceita pela função `analogWrite()`.  
@@ -65,4 +63,14 @@ Isso é feito com a função `map()`, que ajusta proporcionalmente os valores. O
 
 [![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/potenciometro.ino)  
 ![Foto montagem física](assets/potenciometro.png)
+
+--- 
+
+### 9 - Display LCD
+
+**Descrição:**  
+Este projeto utiliza um `display LCD 16x2` para exibir mensagens personalizadas. Ele permite que você aprenda a configurar a biblioteca `LiquidCrystal` e enviar textos para o display. É ideal para mostrar informações em tempo real, como sensores, temporizadores ou interações com o usuário.
+
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/display_LCD.ino)  
+![Foto montagem física](assets/LCD.png)
 
