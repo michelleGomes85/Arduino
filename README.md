@@ -24,7 +24,15 @@
 
 ---
 
-### 4 - Buzzer  
+### 4 - Botão (Push Button)
+
+**Descrição:**  
+Este projeto demonstra como utilizar um `botão push-button` para controlar um LED. Quando o botão é pressionado, o LED acende; ao soltar, o LED apaga. É uma introdução ao uso de entradas digitais no Arduino e à lógica de leitura de botões.
+
+[![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/button.ino)  
+![Foto montagem física](assets/button.png)
+
+### 5 - Buzzer  
 **Descrição:** Projeto que demonstra o uso de um `buzzer` para gerar sons. Permite compreender como controlar sinais sonoros com o Arduino.
 
 [![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/buzzer.ino)  
@@ -32,7 +40,7 @@
 
 ---
 
-### 5 - Display de Sete Segmentos  
+### 6 - Display de Sete Segmentos  
 **Descrição:** Utilização do `display de sete segmentos` para exibir números. Os segmentos são ativados individualmente para formar os dígitos.
 
 [![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/displaySevenSegments.ino)  
@@ -40,7 +48,7 @@
 
 ---
 
-### 6 - Simulação de Bomba  
+### 7 - Simulação de Bomba  
 **Descrição:** Projeto que combina o `display de sete segmentos` e o `buzzer` para simular uma contagem regressiva de uma bomba. Trabalha lógica de tempo e saída sonora/visual.
 
 [![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/bomb.ino)  
@@ -48,7 +56,7 @@
 
 ---
 
-### 7 - Sensor de Luz (Fotoresistor - LDR)  
+### 8 - Sensor de Luz (Fotoresistor - LDR)  
 **Descrição:** Demonstração do uso de um `fotoresistor (LDR)` para detectar luminosidade. O LED acende automaticamente quando a luz ambiente diminui e apaga quando há claridade.
 
 [![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/sensor_LDR_LED.ino)  
@@ -56,7 +64,7 @@
 
 ---
 
-### 8 - Potenciômetro  
+### 9 - Potenciômetro  
 
 **Descrição:** Este projeto utiliza um `potenciômetro` para controlar o brilho de um LED. O potenciômetro gera um valor analógico de 0 a 1023, dependendo da posição do seu eixo. Para que esse valor seja usado no controle de brilho (via PWM), é necessário convertê-lo para a faixa de 0 a 255 — que é a faixa aceita pela função `analogWrite()`.  
 Isso é feito com a função `map()`, que ajusta proporcionalmente os valores. O LED precisa estar conectado a uma porta PWM do Arduino (identificadas por um símbolo `~` ao lado do número), pois somente essas portas conseguem controlar a intensidade do sinal.
@@ -66,7 +74,7 @@ Isso é feito com a função `map()`, que ajusta proporcionalmente os valores. O
 
 --- 
 
-### 9 - Display LCD
+### 10 - Display LCD
 
 **Descrição:**  
 Este projeto utiliza um `display LCD 16x2` para exibir mensagens personalizadas. Ele permite que você aprenda a configurar a biblioteca `LiquidCrystal` e enviar textos para o display. É ideal para mostrar informações em tempo real, como sensores, temporizadores ou interações com o usuário.
