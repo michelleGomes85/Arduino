@@ -86,3 +86,22 @@ Este projeto utiliza um `display LCD 16x2` para exibir mensagens personalizadas.
 [![Código](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/display_LCD.ino)  
 ![Foto montagem física](assets/LCD.png)
 
+---
+
+### 11 - Sensor Ultrassônico com LEDs  
+
+**Descrição:**  
+Este projeto utiliza um **sensor ultrassônico HC-SR04** para medir a distância até um objeto e acionar **LEDs coloridos** com base na proximidade detectada.  
+O sensor envia pulsos ultrassônicos e mede o tempo de retorno, calculando a distância. Conforme a distância:
+
+- **Distância maior que 117 cm** → LED **amarelo** acende.  
+- **Distância entre 60 cm e 117 cm** → LED **azul** acende.  
+- **Distância menor que 60 cm** → LED **cinza** acende.
+
+> ℹ️ **Observação:** O projeto pode ser implementado com ou sem o uso de bibliotecas auxiliares.  
+> Uma das opções é a biblioteca `Ultrasonic.h`, que facilita a leitura da distância e precisa ser **instalada manualmente** pela IDE do Arduino (não está disponível no Tinkercad).
+
+[![Código sem biblioteca](https://img.shields.io/badge/CodigoSemBiblioteca-blue)](https://github.com/michelleGomes85/Arduino/blob/main/ultrasonic_sensor_WL.ino) 
+[![Código com biblioteca](https://img.shields.io/badge/CodigoComBiblioteca-blue)](https://github.com/michelleGomes85/Arduino/blob/main/ultrasonic_sensor_WIL.ino)  
+![Foto montagem física](assets/ultrasonic_sensor.png)
+
