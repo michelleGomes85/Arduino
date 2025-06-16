@@ -163,9 +163,9 @@ Um **sensor ultrassônico** mede a distância até um objeto usando ondas sonora
 
 ##### Fórmula:
 
-``bash
+```bash
   Distância = (Tempo * Velocidade do som) / 2
-``
+```
 
 > A divisão por 2 é porque o som vai até o objeto e volta.
 
