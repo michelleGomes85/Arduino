@@ -154,3 +154,66 @@ O **Arduino** é uma plataforma eletrônica muito usada para criar projetos inte
 | 16   | LED-  | Cátodo luz de fundo (GND)              |
 
 ---
+
+### Sensor Ultrassônico
+
+#### O que é?
+
+Um **sensor ultrassônico** mede a distância até um objeto usando ondas sonoras de alta frequência (acima de 20 kHz, inaudíveis ao ouvido humano). Ele funciona como um sonar: emite um sinal sonoro e mede o tempo que o eco leva para retornar ao sensor. A distância é calculada com base nesse tempo e na velocidade do som no ar (aproximadamente 343 m/s).
+
+##### Fórmula:
+
+``bash
+  Distância = (Tempo * Velocidade do som) / 2
+``
+
+> A divisão por 2 é porque o som vai até o objeto e volta.
+
+---
+
+#### Como funciona?
+
+1. O sensor envia um pulso de ultrassom.
+2. O pulso se propaga no ar até encontrar um obstáculo.
+3. O som reflete no obstáculo e retorna ao sensor.
+4. O sensor mede o tempo que o pulso levou para ir e voltar.
+5. O microcontrolador (como o Arduino) calcula a distância com base nesse tempo.
+
+#### Tipos de sensores disponíveis
+
+##### 🔹 HC-SR04
+
+- Muito utilizado em projetos com Arduino.  
+- Usa **dois pinos de controle**:
+  - `TRIG`: envia o pulso.
+  - `ECHO`: recebe o eco.
+- Requer mais controle no código (gerar pulso e medir o tempo).
+- Muito popular e barato.
+
+###### 🧪 Pinos do HC-SR04:
+
+| Pino | Função             |
+|------|--------------------|
+| VCC  | Alimentação (5V)   |
+| GND  | Terra              |
+| TRIG | Disparo do pulso   |
+| ECHO | Recebimento do eco |
+
+##### 🔹 PING))) Parallax
+
+- Mais compacto e fácil de usar.
+- Usa **apenas um pino de sinal** (SIG) para envio e recepção.
+- Mais caro, mas reduz a complexidade de conexão.
+- Ideal para quem busca simplicidade no código.
+
+###### 🧪 Pinos do PING))) Parallax:
+
+| Pino | Função             |
+|------|--------------------|
+| VCC  | Alimentação (5V)   |
+| GND  | Terra              |
+| SIG  | Sinal (envia e recebe pulso) |
+
+---
+
+
