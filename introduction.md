@@ -216,4 +216,31 @@ Um **sensor ultrassônico** mede a distância até um objeto usando ondas sonora
 
 ---
 
+### Transistor
 
+O **transistor** é um componente eletrônico que funciona como uma espécie de "interruptor" ou "amplificador" de sinais elétricos. 
+
+- Ele tem três terminais principais: **base**, **coletor** e **emissor**.
+- Com um pequeno sinal na base, o transistor pode controlar uma corrente maior entre o coletor e o emissor.
+- Isso permite ligar e desligar dispositivos eletrônicos, como motores, LEDs, ou até amplificar sinais de áudio.
+
+O transistor é um componente físico, ou seja, é uma peça real que você pode segurar e conectar em um circuito. Ele **não precisa de programação** para funcionar, mas pode ser controlado por sinais enviados por 
+circuitos eletrônicos ou microcontroladores (como o Arduino).
+
+---
+
+### Diodo?
+
+O **diodo** é um componente eletrônico que deixa a corrente elétrica passar em apenas uma direção, como uma "válvula" para eletricidade.
+
+- Ele tem dois terminais: **ânodo** e **cátodo**.
+- A corrente flui do ânodo para o cátodo, mas não no sentido contrário.
+
+**Diferença simples entre diodo e resistor:**
+
+- Um **resistor** limita a quantidade de corrente que passa pelo circuito, independente da direção da corrente. Ele funciona como um "freio" para a eletricidade.
+- Já o **diodo** permite que a corrente passe só em uma direção, bloqueando a corrente se ela tentar passar ao contrário.
+
+- Isso é útil para proteger circuitos contra correntes invertidas ou para retificar sinais.
+
+Assim como o transistor, o diodo é um componente físico e **não precisa de programação** para funcionar.
