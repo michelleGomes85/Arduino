@@ -105,3 +105,16 @@ O sensor envia pulsos ultrassônicos e mede o tempo de retorno, calculando a dis
 [![Código com biblioteca](https://img.shields.io/badge/CodigoComBiblioteca-blue)](https://github.com/michelleGomes85/Arduino/blob/main/ultrasonic_sensor_WIL.ino)  
 ![Foto montagem física](assets/ultrasonic_sensor.png)
 
+### 12 - Sensor de temperatura 
+
+**Descrição:**
+Este projeto utiliza o **sensor de temperatura TMP36** para medir a temperatura ambiente.
+O sensor gera uma tensão proporcional à temperatura (10 mV/°C, com 500 mV a 0 °C), e o Arduino lê essa tensão através de uma entrada analógica (A0).
+Quando a temperatura ultrapassa 30 °C, um LED acende e um buzzer emite um alerta sonoro.
+
+[![Código com biblioteca](https://img.shields.io/badge/Codigo-blue)](https://github.com/michelleGomes85/Arduino/blob/main/sensor_temperature.ino)  
+![Foto montagem física](assets/sensor_temperature.png)
+
+
+
+
