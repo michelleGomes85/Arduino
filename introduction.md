@@ -244,3 +244,18 @@ O **diodo** é um componente eletrônico que deixa a corrente elétrica passar e
 - Isso é útil para proteger circuitos contra correntes invertidas ou para retificar sinais.
 
 Assim como o transistor, o diodo é um componente físico e **não precisa de programação** para funcionar.
+
+---
+
+### Sensor de Temperatura TMP36
+
+- **O que é?** Um sensor analógico que mede a temperatura e converte em uma saída de tensão proporcional.  
+- **Como funciona?**  
+  - A cada **10 mV na saída = 1°C**.  
+  - Em **0°C** a saída é **500 mV**.  
+  - Exemplo: 750 mV = 25°C.  
+- **Pinos principais:**  
+  - **VCC** → alimentação (2,7V a 5,5V)  
+  - **VOUT** → saída analógica (ligada a uma porta analógica do Arduino, como A0)  
+  - **GND** → terra  
+- **Uso no Arduino:** Permite medir a temperatura do ambiente em graus Celsius e usar essa informação em projetos, como estações meteorológicas ou sistemas de monitoramento.  
